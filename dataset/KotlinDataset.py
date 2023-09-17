@@ -55,7 +55,7 @@ class KotlinDataset(Dataset):
                 )
 
                 target_tokens = self.tokenizer(
-                    data['msg'],
+                    "<msg>" + data['msg'],
                     max_length=self.max_target_length,
                     padding="max_length",
                     truncation=True,
